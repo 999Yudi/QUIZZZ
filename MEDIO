@@ -24,7 +24,7 @@
             margin: 30px;
             position: fixed;
             right: -1px;
-            top: -1px;
+            top: -130px;
             margin-top: 100px;
         }
 
@@ -92,8 +92,8 @@
                 <p> O que significa o termo malware?
                 <ul class="opcoes">
                     <li class="incorreto" onclick="checkAnswer(this)"> Programa utilizado para melhorar a segurança dos sistemas.
-                    <li class="incorreto" onclick="checkAnswer(this)"> 
-                    <li class="incorreto" onclick="checkAnswer(this)"> 
+                    <li class="incorreto" onclick="checkAnswer(this)"> Quais são as principais diferenças entre um vírus, um worm e um trojan em termos de funcionamento e propagação?
+                    <li class="incorreto" onclick="checkAnswer(this)"> Como funciona um ransomware e quais medidas podem ser adotadas para minimizar os riscos de infecção por esse tipo de malware?
                     <li class="correto" onclick="checkAnswer(this)">Software malicioso criado para causar danos ou roubar informações.
 
 
