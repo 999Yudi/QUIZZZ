@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seleção de Dificuldade</title>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e7e7e7, #550076, #111111);
+            padding: 50px;
+
+        }
+
+        .card {
+            font-family: "Archivo Black", sans-serif;
+            background-color: #fff;
+            border-radius: 50px;
+            box-shadow: 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            width: 400px;
+            margin: 30px;
+            position: fixed;
+            right: -1px;
+            top: -1px;
+            margin-top: 100px;
+        }
+
+        .card h2 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+
+        .questao {
+            margin-bottom: 20px;
+        }
+
+        .questao p {
+            font-size: 18px;
+        }
+
+        .opcoes { 
+            padding: 0;
+        }
+
+        .opcoes li {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+
+        }
+
+
+        .correto {
+            background-color: #28a745;
+            color: #111111;
+        }
+
+        .incorreto {
+            background-color: #dc3545;
+            color: #111111;
+        }
+    </style>
+    </head>
+
+    <body>
+        
+
+
+        <div class="card">
+            <h2>CRIMES CIBERNETICOS</h2>
+
+
+            <div class="question">
+                <p>O que é um "vírus" de computador?
+                <ul class="opcoes">
+                    <li class="correto" onclick="checkAnswer(this)">Um software que se espalha de computador para computador
+                    <li class="incorreto" onclick="checkAnswer(this)"> Um programa que rouba informações pessoais
+                    <li class="incorreto" onclick="checkAnswer(this)">Um tipo de firewall
+                    <li class="incorreto" onclick="checkAnswer(this)"> Um aplicativo de segurança
+                </ul>
+            </div>
+
+
+            <div class="question">
+                <p>Qual é o objetivo de um "ransomware"?
+                <ul class="opcoes">
+                    <li class="incorreto" onclick="checkAnswer(this)">Roubar senhas de e-mails
+                    <li class="correto" onclick="checkAnswer(this)"> Pedir dinheiro para liberar arquivos bloqueados
+                    <li class="incorreto" onclick="checkAnswer(this)"> Instalar programas antivírus no computador
+                    <li class="incorreto" onclick="checkAnswer(this)">Aumentar a velocidade do computador
+
+
+                </ul>
+            </div>
+
+
+
+
+
+
+
+
+
+        </div>
+
+        </div>
+
+        <script>
+            function checkAnswer(option) {
+
+                const isCorrect = option.classList.contains('correto');
+
+
+                if (isCorrect) {
+                    option.style.backgroundColor = "#28a745";
+                } else {
+                    option.style.backgroundColor = "#dc3545";
+                }
+
+                const options = option.parentElement.querySelectorAll('li');
+                options.forEach(opt => {
+                    opt.style.pointerEvents = 'none';
+                });
+            }
+        </script>
+
+        </style>
+
+    </body>
