@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jogando - Difícil</title>
+
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e7e7e7, #550076, #111111);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            height: 1350px;
+            padding: 40px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 50px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px 60px;
+            width: 400px;
+        }
+
+        .card h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Archivo Black", sans-serif;
+        }
+
+        .questao {
+            margin-bottom: 20px;
+            font-family: "Archivo Black", sans-serif;
+        }
+
+        .questao h2 {
+            font-family: "Archivo Black", sans-serif;
+        }
+
+        .opcoes {
+            padding: 0;
+        }
+
+        .opcoes li {
+            list-style: none;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .correto {
+            background-color: #28a745;
+        }
+
+        .incorreto {
+            background-color: #dc3545;
+        }
+
+        .imagem {
+            position: absolute;
+            top: 250px;
+            left: 90px;
+            padding: 0;
+            border-radius: 8px;
+            width: 5300px;
+            height: auto;
+        }
+
+        .sv {
+            position: absolute;
+            bottom: 550px;
+            left: 20px;
+            background: #5f0077;
+            color: white;
+            border: none;
+            font-size: 28px;
+            padding: 10px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .seta {
+            background: #222;
+            color: white;
+            border: none;
+            font-size: 28px;
+            padding: 10px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <a href="TELA DE DIFICULDADE.html">
+            <button class="sv">◀</button>
+        </a>
+
+        <div class="imagem">
+            <img src="https://i.ibb.co/8DKgkB66/image.png" alt="image">
+        </div>
+
+        <div class="card">
+            <h2>CRIMES CIBERNETICOS</h2>
+
+
+            <div class="question">
+                <p>Qual das alternativas abaixo melhor descreve o que é um ataque de DDoS?
+                <ul class="opcoes">
+                    <li class="correto" onclick="checkAnswer(this)"> Um ataque que tenta derrubar um site ou serviço com
+                        excesso de acessos simultâneos.
+                    <li class="incorreto" onclick="checkAnswer(this)"> Um tipo de phishing que usa redes sociais.
+                    <li class="incorreto" onclick="checkAnswer(this)">Um malware que criptografa arquivos para pedir
+                        resgate.
+                    <li class="incorreto" onclick="checkAnswer(this)"> Um vírus que rouba senhas.
+                </ul>
+            </div>
+
+
+            <div class="question">
+                <p> O que significa o termo malware?
+                <ul class="opcoes">
+                    <li class="incorreto" onclick="checkAnswer(this)"> Programa utilizado para melhorar a segurança dos
+                        sistemas.
+                    <li class="incorreto" onclick="checkAnswer(this)">
+                    <li class="incorreto" onclick="checkAnswer(this)">
+                    <li class="correto" onclick="checkAnswer(this)">Software malicioso criado para causar danos ou
+                        roubar informações.
+                </ul>
+            </div>
+
+            <div class="question">
+                <p>Qual das alternativas abaixo melhor descreve o que é um ataque de DDoS?
+                <ul class="opcoes">
+                    <li class="correto" onclick="checkAnswer(this)"> Um ataque que tenta derrubar um site ou serviço com
+                        excesso de acessos simultâneos.
+                    <li class="incorreto" onclick="checkAnswer(this)"> Um tipo de phishing que usa redes sociais.
+                    <li class="incorreto" onclick="checkAnswer(this)">Um malware que criptografa arquivos para pedir
+                        resgate.
+                    <li class="incorreto" onclick="checkAnswer(this)"> Um vírus que rouba senhas.
+                </ul>
+
+                <div class="setas">
+                    <a href="final.html"><button class="seta">▶</button> </a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script>
+            function checkAnswer(option) {
+
+                const isCorrect = option.classList.contains('correto');
+
+
+                if (isCorrect) {
+                    option.style.backgroundColor = "#28a745";
+                } else {
+                    option.style.backgroundColor = "#dc3545";
+                }
+
+                const options = option.parentElement.querySelectorAll('li');
+                options.forEach(opt => {
+                    opt.style.pointerEvents = 'none';
+                });
+            }
+        </script>
+
+        </style>
+
+    </body>
