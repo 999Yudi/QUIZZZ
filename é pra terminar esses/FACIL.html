@@ -65,12 +65,24 @@
 
         .imagem {
             position: absolute;
-            top: 250px;
+            top: 150px;
             left: 90px;
             padding: 0;
             border-radius: 8px;
             width: 5300px;
             height: auto;
+        }
+
+        
+
+        .seta {
+            background: #222;
+            color: white;
+            border: none;
+            font-size: 28px;
+            padding: 10px 14px;
+            border-radius: 6px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -104,16 +116,13 @@
             </ul>
         </div>
 
-        <div class="question">
-            <p>O que significa ter uma “senha forte”?</p>
-            <ul class="opcoes">
-                <li class="incorreto" onclick="checkAnswer(this)">Senha curta e fácil</li>
-                <li class="incorreto" onclick="checkAnswer(this)">Senha com seu nome</li>
-                <li class="correto" onclick="checkAnswer(this)">Senha com letras, números e símbolos</li>
-                <li class="incorreto" onclick="checkAnswer(this)">Senha igual em todos os sites</li>
-            </ul>
-        </div>
 
+           
+<div class="setas">
+        <a href="jogar.html"> <button class="seta">◀</button> </a>
+        <a href="jogabilidade1.html"><button class="seta">▶</button> </a>
+    </div>
+       
     </div>
 
     <script>
