@@ -3,133 +3,134 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Seleção de Dificuldade</title>
-
-<body>
+    <title>Jogando - Fácil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #e7e7e7, #550076, #111111);
-            padding: 50px;
-
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            height: 1350px;
+            padding: 40px;
         }
 
         .card {
-            font-family: "Archivo Black", sans-serif;
             background-color: #fff;
             border-radius: 50px;
-            box-shadow: 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 10px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px 60px;
             width: 400px;
-            margin: 30px;
-            position: fixed;
-            right: -1px;
-            top: -1px;
-            margin-top: 100px;
         }
 
-        .card h2 {
+        .card h1 {
             font-size: 24px;
             text-align: center;
             margin-bottom: 20px;
+            font-family: "Archivo Black", sans-serif;
         }
-
 
         .questao {
             margin-bottom: 20px;
+            font-family: "Archivo Black", sans-serif;
         }
 
-        .questao p {
-            font-size: 18px;
+        .questao h2 {
+            font-family: "Archivo Black", sans-serif;
         }
 
-        .opcoes { 
+        .opcoes {
             padding: 0;
         }
 
         .opcoes li {
+            list-style: none;
             margin: 10px 0;
             padding: 10px;
             background-color: #f1f1f1;
             border-radius: 8px;
-
+            cursor: pointer;
         }
-
 
         .correto {
             background-color: #28a745;
-            color: #111111;
         }
 
         .incorreto {
             background-color: #dc3545;
-            color: #111111;
+        }
+
+        .imagem {
+            position: absolute;
+            top: 250px;
+            left: 90px;
+            padding: 0;
+            border-radius: 8px;
+            width: 5300px;
+            height: auto;
         }
     </style>
-    </head>
+</head>
 
-    <body>
-        
+<body>
 
+    <div class="imagem">
+        <img src="https://i.ibb.co/chxXGy6C/image.png" alt="image">
+    </div>
 
-        <div class="card">
-            <h2>CRIMES CIBERNETICOS</h2>
+    <div class="card">
+        <h1>CRIMES CIBERNÉTICOS</h1>
 
-
-            <div class="question">
-                <p>O que é um "vírus" de computador?
-                <ul class="opcoes">
-                    <li class="correto" onclick="checkAnswer(this)">Um software que se espalha de computador para computador
-                    <li class="incorreto" onclick="checkAnswer(this)"> Um programa que rouba informações pessoais
-                    <li class="incorreto" onclick="checkAnswer(this)">Um tipo de firewall
-                    <li class="incorreto" onclick="checkAnswer(this)"> Um aplicativo de segurança
-                </ul>
-            </div>
-
-
-            <div class="question">
-                <p>Qual é o objetivo de um "ransomware"?
-                <ul class="opcoes">
-                    <li class="incorreto" onclick="checkAnswer(this)">Roubar senhas de e-mails
-                    <li class="correto" onclick="checkAnswer(this)"> Pedir dinheiro para liberar arquivos bloqueados
-                    <li class="incorreto" onclick="checkAnswer(this)"> Instalar programas antivírus no computador
-                    <li class="incorreto" onclick="checkAnswer(this)">Aumentar a velocidade do computador
-
-
-                </ul>
-            </div>
-
-
-
-
-
-
-
-
-
+        <div class="question">
+            <p>O que é um crime virtual?</p>
+            <ul class="opcoes">
+                <li class="incorreto" onclick="checkAnswer(this)">Um software</li>
+                <li class="incorreto" onclick="checkAnswer(this)">Um tipo de esporte digital</li>
+                <li class="correto" onclick="checkAnswer(this)">Um crime cometido usando a internet</li>
+                <li class="incorreto" onclick="checkAnswer(this)">Um erro no computador</li>
+            </ul>
         </div>
 
+        <div class="question">
+            <p>Qual desses é um exemplo de crime virtual?</p>
+            <ul class="opcoes">
+                <li class="incorreto" onclick="checkAnswer(this)">Roubo de bicicleta</li>
+                <li class="correto" onclick="checkAnswer(this)">Invasão de conta de e-mail</li>
+                <li class="incorreto" onclick="checkAnswer(this)">Pichação de muros</li>
+                <li class="incorreto" onclick="checkAnswer(this)">Briga na escola</li>
+            </ul>
         </div>
 
-        <script>
-            function checkAnswer(option) {
+        <div class="question">
+            <p>O que significa ter uma “senha forte”?</p>
+            <ul class="opcoes">
+                <li class="incorreto" onclick="checkAnswer(this)">Senha curta e fácil</li>
+                <li class="incorreto" onclick="checkAnswer(this)">Senha com seu nome</li>
+                <li class="correto" onclick="checkAnswer(this)">Senha com letras, números e símbolos</li>
+                <li class="incorreto" onclick="checkAnswer(this)">Senha igual em todos os sites</li>
+            </ul>
+        </div>
 
-                const isCorrect = option.classList.contains('correto');
+    </div>
 
-
-                if (isCorrect) {
-                    option.style.backgroundColor = "#28a745";
-                } else {
-                    option.style.backgroundColor = "#dc3545";
-                }
-
-                const options = option.parentElement.querySelectorAll('li');
-                options.forEach(opt => {
-                    opt.style.pointerEvents = 'none';
-                });
+    <script>
+        function checkAnswer(option) {
+            const isCorrect = option.classList.contains('correto');
+            if (isCorrect) {
+                option.style.backgroundColor = "#28a745";
+            } else {
+                option.style.backgroundColor = "#dc3545";
             }
-        </script>
+            const options = option.parentElement.querySelectorAll('li');
+            options.forEach(opt => {
+                opt.style.pointerEvents = 'none';
+            });
+        }
+    </script>
 
-        </style>
+</body>
 
-    </body>
+</html>
